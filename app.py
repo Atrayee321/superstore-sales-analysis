@@ -20,68 +20,115 @@ SQL_PATH = BASE_DIR / "Sales_Analysis.sql"
 POWERBI_PATH = BASE_DIR / "Sales_performance_dashboard.pbix"
 
 
+
 # ---------------- Styling ----------------
 st.markdown("""
 <style>
 
-/* Dashboard background */
+/* Main background */
 .stApp {
-    background-color: #f7f9fc;
+    background-color: #101827;
+    color: #FFFFFF;
+}
+
+/* Main content */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 /* Headings */
 h1, h2, h3, h4 {
-    color: #183153 !important;
+    color: #FFFFFF !important;
+    font-weight: 650 !important;
 }
 
-/* General text */
-p, label, li {
-    color: #334155;
+/* Normal text */
+p, li, label {
+    color: #D5DFEB;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #172338;
+}
+
+[data-testid="stSidebar"] * {
+    color: #E6EDF7;
 }
 
 /* KPI cards */
 [data-testid="stMetric"] {
-    background-color: #ffffff !important;
-    border: 1px solid #dce3ed;
-    padding: 18px;
-    border-radius: 12px;
+    background-color: #1B2940 !important;
+    border: 1px solid #30415C !important;
+    padding: 20px !important;
+    border-radius: 14px !important;
 }
 
 /* KPI labels */
 [data-testid="stMetricLabel"],
 [data-testid="stMetricLabel"] * {
-    color: #52647a !important;
+    color: #A9B8CC !important;
+    font-size: 14px !important;
 }
 
 /* KPI numbers */
 [data-testid="stMetricValue"],
 [data-testid="stMetricValue"] * {
-    color: #183153 !important;
+    color: #20B8A6 !important;
+    font-weight: 700 !important;
 }
 
-/* KPI delta values */
+/* KPI delta */
 [data-testid="stMetricDelta"],
 [data-testid="stMetricDelta"] * {
-    color: #16803c !important;
-}
-
-/* Sidebar */
-[data-testid="stSidebar"] {
-    background-color: #eef2f7;
-}
-
-[data-testid="stSidebar"] * {
-    color: #183153;
+    color: #4ADE80 !important;
 }
 
 /* Captions */
-.stCaption,
 [data-testid="stCaption"] {
-    color: #64748b !important;
+    color: #A9B8CC !important;
+}
+
+/* Dividers */
+hr {
+    border-color: #30415C !important;
+}
+
+/* Expanders */
+[data-testid="stExpander"] {
+    background-color: #172338;
+    border: 1px solid #30415C;
+    border-radius: 12px;
+}
+
+/* Buttons */
+.stButton button,
+.stDownloadButton button {
+    background-color: #20B8A6;
+    color: #101827 !important;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.stButton button:hover,
+.stDownloadButton button:hover {
+    background-color: #5AD8C5;
+    color: #101827 !important;
+}
+
+/* Inputs */
+.stSelectbox, .stMultiSelect, .stDateInput {
+    border-radius: 8px;
 }
 
 </style>
 """, unsafe_allow_html=True)
+
+# ---------------- Plotly Theme ----------------
+px.defaults.template = "plotly_dark"
+
 
 
 # ---------------- Data loading ----------------
