@@ -19,19 +19,70 @@ DATA_PATH = BASE_DIR / "Cleaned_Superstore_Sales.csv"
 SQL_PATH = BASE_DIR / "Sales_Analysis.sql"
 POWERBI_PATH = BASE_DIR / "Sales_performance_dashboard.pbix"
 
+
 # ---------------- Styling ----------------
 st.markdown("""
 <style>
-    .main {background-color: #f7f9fc;}
-    [data-testid="stMetric"] {
-        background: white;
-        border: 1px solid #e8edf4;
-        padding: 16px;
-        border-radius: 12px;
-    }
-    h1, h2, h3 {color: #183153;}
+
+/* Dashboard background */
+.stApp {
+    background-color: #f7f9fc;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: #183153 !important;
+}
+
+/* General text */
+p, label, li {
+    color: #334155;
+}
+
+/* KPI cards */
+[data-testid="stMetric"] {
+    background-color: #ffffff !important;
+    border: 1px solid #dce3ed;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+/* KPI labels */
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] * {
+    color: #52647a !important;
+}
+
+/* KPI numbers */
+[data-testid="stMetricValue"],
+[data-testid="stMetricValue"] * {
+    color: #183153 !important;
+}
+
+/* KPI delta values */
+[data-testid="stMetricDelta"],
+[data-testid="stMetricDelta"] * {
+    color: #16803c !important;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #eef2f7;
+}
+
+[data-testid="stSidebar"] * {
+    color: #183153;
+}
+
+/* Captions */
+.stCaption,
+[data-testid="stCaption"] {
+    color: #64748b !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
+
 
 # ---------------- Data loading ----------------
 REQUIRED_COLUMNS = [
