@@ -21,14 +21,15 @@ POWERBI_PATH = BASE_DIR / "Sales_performance_dashboard.pbix"
 
 
 
+
 # ---------------- Styling ----------------
 st.markdown("""
 <style>
 
-/* Main background */
+/* Main dashboard background */
 .stApp {
-    background-color: #F1F5FB;
-    color: #263957;
+    background-color: #F4F0FA;
+    color: #26334D;
 }
 
 /* Main content spacing */
@@ -37,100 +38,99 @@ st.markdown("""
     padding-bottom: 2rem;
 }
 
-/* Main headings */
+/* Headings */
 h1, h2, h3, h4 {
-    color: #263957 !important;
+    color: #26334D !important;
     font-weight: 650 !important;
 }
 
-/* General text */
+/* Normal text */
 p, li, label {
-    color: #52647A;
+    color: #59677D;
 }
 
 /* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: #E8EEF8;
+    background-color: #E9E2F2;
 }
 
 [data-testid="stSidebar"] * {
-    color: #263957;
+    color: #26334D;
 }
 
 /* KPI cards */
 [data-testid="stMetric"] {
     background-color: #FFFFFF !important;
-    border: 1px solid #DCE5F1 !important;
+    border: 1px solid #E4D9EF !important;
     padding: 20px !important;
     border-radius: 14px !important;
-    box-shadow: 0 2px 8px rgba(38, 57, 87, 0.05);
+    box-shadow: 0 3px 10px rgba(38, 51, 77, 0.06);
 }
 
 /* KPI labels */
 [data-testid="stMetricLabel"],
 [data-testid="stMetricLabel"] * {
-    color: #718096 !important;
+    color: #7A6C91 !important;
     font-size: 14px !important;
 }
 
-/* KPI values */
+/* KPI numbers */
 [data-testid="stMetricValue"],
 [data-testid="stMetricValue"] * {
-    color: #344F78 !important;
+    color: #65528B !important;
     font-weight: 700 !important;
 }
 
 /* KPI delta */
 [data-testid="stMetricDelta"],
 [data-testid="stMetricDelta"] * {
-    color: #239B75 !important;
+    color: #299B78 !important;
 }
 
 /* Captions */
-[data-testid="stCaption"] {
-    color: #718096 !important;
+[data-testid="stCaption"],
+.stCaption {
+    color: #7D8798 !important;
 }
 
 /* Dividers */
 hr {
-    border-color: #DCE5F1 !important;
+    border-color: #DED5E9 !important;
 }
 
 /* Expanders */
 [data-testid="stExpander"] {
     background-color: #FFFFFF;
-    border: 1px solid #DCE5F1;
+    border: 1px solid #E4D9EF;
     border-radius: 12px;
 }
 
 /* Buttons */
 .stButton button,
 .stDownloadButton button {
-    background-color: #DCE8FA;
-    color: #263957 !important;
-    border: 1px solid #C6D8F2;
-    border-radius: 8px;
+    background-color: #D8B4E2;
+    color: #26334D !important;
+    border: 1px solid #C9A1D5;
+    border-radius: 9px;
     font-weight: 600;
 }
 
 .stButton button:hover,
 .stDownloadButton button:hover {
-    background-color: #C9DCF7;
-    color: #263957 !important;
+    background-color: #C99BD8;
+    color: #26334D !important;
 }
 
-/* Input areas */
+/* Input fields */
 [data-baseweb="select"] > div,
 [data-baseweb="input"] > div {
     background-color: #FFFFFF;
-    border-color: #DCE5F1;
+    border-color: #D9CDE6;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- Plotly Theme ----------------
-px.defaults.template = "plotly_white"
 
 
 
