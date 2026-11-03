@@ -22,56 +22,28 @@ POWERBI_PATH = BASE_DIR / "Sales_performance_dashboard.pbix"
 
 
 
-# ---------------- Styling ----------------
-st.markdown("""
-<style>
-
 /* Main dashboard background */
 .stApp {
-    background-color: #F4F0FA;
+    background-color: #D8D2E5;
     color: #26334D;
-}
-
-/* Main content spacing */
-.block-container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-/* Headings */
-h1, h2, h3, h4 {
-    color: #26334D !important;
-    font-weight: 650 !important;
-}
-
-/* Normal text */
-p, li, label {
-    color: #59677D;
 }
 
 /* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: #E9E2F2;
-}
-
-[data-testid="stSidebar"] * {
-    color: #26334D;
+    background-color: #CEC5DF;
 }
 
 /* KPI cards */
 [data-testid="stMetric"] {
     background-color: #FFFFFF !important;
-    border: 1px solid #E4D9EF !important;
+    border: 1px solid #C9BEDA !important;
     padding: 20px !important;
     border-radius: 14px !important;
-    box-shadow: 0 3px 10px rgba(38, 51, 77, 0.06);
 }
 
-/* KPI labels */
-[data-testid="stMetricLabel"],
-[data-testid="stMetricLabel"] * {
-    color: #7A6C91 !important;
-    font-size: 14px !important;
+/* Headings */
+h1, h2, h3, h4 {
+    color: #26334D !important;
 }
 
 /* KPI numbers */
@@ -81,55 +53,16 @@ p, li, label {
     font-weight: 700 !important;
 }
 
-/* KPI delta */
-[data-testid="stMetricDelta"],
-[data-testid="stMetricDelta"] * {
-    color: #299B78 !important;
-}
-
-/* Captions */
-[data-testid="stCaption"],
-.stCaption {
-    color: #7D8798 !important;
+/* KPI labels */
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] * {
+    color: #756987 !important;
 }
 
 /* Dividers */
 hr {
-    border-color: #DED5E9 !important;
+    border-color: #BEB3D0 !important;
 }
-
-/* Expanders */
-[data-testid="stExpander"] {
-    background-color: #FFFFFF;
-    border: 1px solid #E4D9EF;
-    border-radius: 12px;
-}
-
-/* Buttons */
-.stButton button,
-.stDownloadButton button {
-    background-color: #D8B4E2;
-    color: #26334D !important;
-    border: 1px solid #C9A1D5;
-    border-radius: 9px;
-    font-weight: 600;
-}
-
-.stButton button:hover,
-.stDownloadButton button:hover {
-    background-color: #C99BD8;
-    color: #26334D !important;
-}
-
-/* Input fields */
-[data-baseweb="select"] > div,
-[data-baseweb="input"] > div {
-    background-color: #FFFFFF;
-    border-color: #D9CDE6;
-}
-
-</style>
-""", unsafe_allow_html=True)
 
 
 
