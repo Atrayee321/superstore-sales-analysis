@@ -2,7 +2,7 @@
 
 An interactive sales analytics application built with **Python, Streamlit, Pandas and Plotly**. It uses the cleaned Superstore dataset and complements the SQL and Power BI analysis included in this repository.
 
-**Live app:** ``
+**Live app:** `https://superstore-sales-analysis-am346gmdq9unrua9ocy2yl.streamlit.app/`
 
 ## Project overview
 
