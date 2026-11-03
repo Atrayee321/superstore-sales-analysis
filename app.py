@@ -27,107 +27,111 @@ st.markdown("""
 
 /* Main background */
 .stApp {
-    background-color: #101827;
-    color: #FFFFFF;
+    background-color: #F1F5FB;
+    color: #263957;
 }
 
-/* Main content */
+/* Main content spacing */
 .block-container {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-/* Headings */
+/* Main headings */
 h1, h2, h3, h4 {
-    color: #FFFFFF !important;
+    color: #263957 !important;
     font-weight: 650 !important;
 }
 
-/* Normal text */
+/* General text */
 p, li, label {
-    color: #D5DFEB;
+    color: #52647A;
 }
 
 /* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: #172338;
+    background-color: #E8EEF8;
 }
 
 [data-testid="stSidebar"] * {
-    color: #E6EDF7;
+    color: #263957;
 }
 
 /* KPI cards */
 [data-testid="stMetric"] {
-    background-color: #1B2940 !important;
-    border: 1px solid #30415C !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #DCE5F1 !important;
     padding: 20px !important;
     border-radius: 14px !important;
+    box-shadow: 0 2px 8px rgba(38, 57, 87, 0.05);
 }
 
 /* KPI labels */
 [data-testid="stMetricLabel"],
 [data-testid="stMetricLabel"] * {
-    color: #A9B8CC !important;
+    color: #718096 !important;
     font-size: 14px !important;
 }
 
-/* KPI numbers */
+/* KPI values */
 [data-testid="stMetricValue"],
 [data-testid="stMetricValue"] * {
-    color: #20B8A6 !important;
+    color: #344F78 !important;
     font-weight: 700 !important;
 }
 
 /* KPI delta */
 [data-testid="stMetricDelta"],
 [data-testid="stMetricDelta"] * {
-    color: #4ADE80 !important;
+    color: #239B75 !important;
 }
 
 /* Captions */
 [data-testid="stCaption"] {
-    color: #A9B8CC !important;
+    color: #718096 !important;
 }
 
 /* Dividers */
 hr {
-    border-color: #30415C !important;
+    border-color: #DCE5F1 !important;
 }
 
 /* Expanders */
 [data-testid="stExpander"] {
-    background-color: #172338;
-    border: 1px solid #30415C;
+    background-color: #FFFFFF;
+    border: 1px solid #DCE5F1;
     border-radius: 12px;
 }
 
 /* Buttons */
 .stButton button,
 .stDownloadButton button {
-    background-color: #20B8A6;
-    color: #101827 !important;
-    border: none;
+    background-color: #DCE8FA;
+    color: #263957 !important;
+    border: 1px solid #C6D8F2;
     border-radius: 8px;
     font-weight: 600;
 }
 
 .stButton button:hover,
 .stDownloadButton button:hover {
-    background-color: #5AD8C5;
-    color: #101827 !important;
+    background-color: #C9DCF7;
+    color: #263957 !important;
 }
 
-/* Inputs */
-.stSelectbox, .stMultiSelect, .stDateInput {
-    border-radius: 8px;
+/* Input areas */
+[data-baseweb="select"] > div,
+[data-baseweb="input"] > div {
+    background-color: #FFFFFF;
+    border-color: #DCE5F1;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------- Plotly Theme ----------------
-px.defaults.template = "plotly_dark"
+px.defaults.template = "plotly_white"
+
 
 
 
